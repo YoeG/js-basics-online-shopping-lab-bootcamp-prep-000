@@ -3,16 +3,16 @@ function netExplosiveWeight (qty,exp,weight)
 {
   if (weight === false && exp.weight === false)
    {return 'You need to enter a weight';}
-  
-  else if (weight === false && exp.weight === true) 
+
+  else if (weight === false && exp.weight === true)
   {return exp.weight * qty * exp.reFactor;}
-  
+
   else if (weight === true && exp.weight === true)
     {return weight * qty * exp.reFactor;}
-  
+
   else if (weight === true && exp.weight === false)
     {return weight * qty * exp.reFactor;}
-  
+
 }
 
 c4 = {name: 'C4', weight: 1.25, reFactor: 1.34 };
