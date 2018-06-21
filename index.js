@@ -1,9 +1,17 @@
-function ass (n)
+
+newObj = {new: 'ass', butt: 'hole'}
+
+
+function f ()
 
 {
 
-return 'ass'
+ if (newObj.corn === false)
+
+ {
+   return 99
+ }
 
 }
 
-console.log(ass(9))
+console.log(f())
