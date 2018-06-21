@@ -9,7 +9,7 @@ function f ()
  if (newObj.new === !false)
 
  {
-   return 99
+   return '99'
  }
 
 }
