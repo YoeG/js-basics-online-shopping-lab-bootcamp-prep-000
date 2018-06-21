@@ -45,4 +45,4 @@ sheetExplosiveM186 = {name: 'Sheet explosive(M186)', reFactor: 1.14 };
 
 bangaloreTorpedoM1A2 = {name: 'Bangaloretorpedo, M1A2', reFactor: 1.17 };
 
-document.write(netExplosiveWeight(1, c4, 3));
+console.log(netExplosiveWeight(1, c4, 3));
