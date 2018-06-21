@@ -12,6 +12,8 @@ function f ()
    return '99'
  }
 
+ else {return '100'}
+
 }
 
 console.log(f())
