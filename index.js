@@ -2,8 +2,8 @@ function ass (n)
 
 {
 
-return n*n
-  
+return n + 'ass'
+
 }
 
 console.log(ass(9))
