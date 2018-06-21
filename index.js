@@ -1,138 +1,48 @@
-var cart = [];
+function netExplosiveWeight (qty,exp,weight)
 
-function getCart() {
- return cart;
+{
+  if (weight === false && exp.weight === false)
+   {return 'You need to enter a weight';}
+  
+  else if (weight === false && exp.weight === true) 
+  {return exp.weight * qty * exp.reFactor;}
+  
+  else if (weight === true && exp.weight === true)
+    {return weight * qty * exp.reFactor;}
+  
+  else if (weight === true && exp.weight === false)
+    {return weight * qty * exp.reFactor;}
+  
 }
 
-function setCart(c) {
-  cart = c;
-  return cart;
-}
-//////////////////////////////////////////////////////////////////////////////////////////////////
-function addToCart(item) {                                                                    
-  var string = item;
-  item = {};
-  
-  item.itemName = string;
-  item.itemPrice = parseInt(Math.random() * 100) + 1
-  
-  cart.push(item);
- 
- return item.itemName + ' has been added to your cart.';
-}
+c4 = {name: 'C4', weight: 1.25, reFactor: 1.34 };
 
-/////////////////////////////////////TEST/////////////////////////////////////////////////////////
-addToCart('grapes');
-addToCart('bananas');
-addToCart('apples');
-console.log(cart)
-/////////////////////////////////////TEST/////////////////////////////////////////////////////////
+ammoniumNitrate = {name: 'Ammonium nitrate', reFactor: 0.42 };
 
-function viewCart() {
- 
-  var string = 'In your cart, you have '
-  var i = 0;
-  
-  
-  if (!cart.length)
-  
-  {
-    
-    return 'Your shopping cart is empty.';
-    
-  }
-  
-  else if (cart.length === 1)
-  
-  {
-    
-    return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`
-    
-  }
-  while (i < cart.length)
-  
-  {
-    
-    string += `${cart[i].itemName} at $${cart[i].itemPrice}, `
-    i++
-    
-    if (i === cart.length - 1)
-    
-    {
-      
-      string += `and ${cart[i].itemName} at $${cart[i].itemPrice}.`
-      return string;
-    }
-  }
-  
-  
-}
-//////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////
+petn = {name: 'PETN', reFactor: 1.66};
 
+rdx = {name: 'RDX', reFactor: 1.60};
 
-function total() {
-  var x = 0;
-  
-  for ( var n = 0; n < cart.length; n++)
-  
-  {
-    
-     x += cart[n].itemPrice
-    
-  }
-  
-  return x;
-}
+tnt = {name: 'TNT', reFactor: 1};
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
+tetryl = {name: 'Tetryl', reFactor: 1.25};
 
-function removeFromCart(item) {
-  for (var i = 0; i < cart.length; i++)
-  
-  {
-    
-    if (item === cart[i].itemName)
-    
-    {
-      
-      cart.splice(i, 1);
-      return cart;
-      
-    }
-    
-   }
-   
-   return 'That item is not in your cart.';
-}
-console.log(total());
-function placeOrder(cardNumber) {
-  if (!cardNumber)
-  
-  {
-    
-    return `Sorry, we don't have a credit card on file for you.`
-    
-  }
-  
-  if (cardNumber)
-  
-  {
-    
-    var totaln = parseInt(total())
-    
-    for (var i = 0; i < cart.length; i++)
-    
-    {
-      
-      cart.splice(i,1)
-      
-    }
-    
-    
-    return `Your total cost is $${totaln}, which will be charged to the card ${cardNumber}.`
-    
-  }
-}
+nitroglycerin = {name: 'Nitroglycerin', reFactor: 1.50 };
 
-placeOrder(123);
+blackPowder = {name: 'Black powder', reFactor: 0.55};
+
+amatol8020 = {name: 'Amatol 80/20', reFactor: 1.17 };
+
+compositionB = {name: 'Composition B', reFactor: 1.35};
+
+compositionH6 = {name: 'CompositionH6', reFactor: 1.33 };
+
+m1Dynamite = {name: 'M1 dynamite ', reFactor: 0.92};
+
+detonatingCord= {name: 'Detonating cord', reFactor: 1.66};
+
+sheetExplosiveM186 = {name: 'Sheet explosive(M186)', reFactor: 1.14 };
+
+bangaloreTorpedoM1A2 = {name: 'Bangaloretorpedo, M1A2', reFactor: 1.17 };
+
+document.write(netExplosiveWeight(1, c4, 3));
