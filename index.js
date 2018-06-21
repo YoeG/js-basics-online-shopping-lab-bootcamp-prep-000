@@ -2,7 +2,7 @@ function ass (n)
 
 {
 
-return n + 'ass'
+return 'ass'
 
 }
 
