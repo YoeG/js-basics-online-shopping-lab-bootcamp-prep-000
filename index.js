@@ -6,7 +6,7 @@ function f ()
 
 {
 
- if (newObj.new === true)
+ if (newObj.new === !false)
 
  {
    return 99
