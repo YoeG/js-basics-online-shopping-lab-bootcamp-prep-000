@@ -16,4 +16,4 @@ function f ()
 
 }
 
-console.log(f.hasOWnProperty(new))
+console.log(f.hasOWnProperty('new'))
