@@ -6,7 +6,7 @@ function f ()
 
 {
 
- if (newObj.corn === false)
+ if (newObj.new === false)
 
  {
    return 99
