@@ -1,5 +1,5 @@
 
-newObj = {new: 'ass', butt: 'hole'}
+newObj = {new: 1, butt: 'hole'}
 
 
 function f ()
